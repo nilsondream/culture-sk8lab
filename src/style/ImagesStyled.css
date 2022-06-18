@@ -1,0 +1,24 @@
+.images-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.images-left, .images-right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.images-left img, .images-right img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: opacity(1);
+    transition: .5s all cubic-bezier(.165,.84,.44,1);
+}
+
+.images-left img:hover, .images-right img:hover {
+    filter: opacity(.7);
+    transition: .5s all cubic-bezier(.165,.84,.44,1);
+}

@@ -1,0 +1,109 @@
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(var(--vh, 1vh) * 100);
+    position: fixed;
+    left: 50%;
+    right: 50%;
+    padding: 20px 0;
+    z-index: 99;
+}
+
+.menu-container h1 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    cursor: default;
+}
+
+.menu-container .menu-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu-container .menu-links a {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    display: none;
+    cursor: default;
+}
+
+.menu-container .menu-links .active {
+    display: block;
+}
+
+.menu-container svg {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.sidebar {
+    opacity: 0;
+    z-index: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .25s all ease-out;
+}
+
+.sidebar .menu-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sidebar .menu-links .link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+
+.sidebar .menu-links .link a{
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
+.sidebar .menu-links .link p{
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #777;
+}
+
+.sidebar .menu-links .link .active{
+    text-decoration:line-through;
+}
+
+.sidebar svg {
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+}
+
+.sidebar-active {
+    opacity: 1;
+    z-index: 999;
+    transition: .25s all ease-out;
+}
