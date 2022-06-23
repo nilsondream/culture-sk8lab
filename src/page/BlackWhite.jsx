@@ -1,10 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import Skeleton from 'react-loading-skeleton'
 import ImagesBW from '../data/ImagesBW'
 import ScrollToTop from '../components/ScrollToTop'
 import '../style/ImagesStyled.css'
-import 'react-loading-skeleton/dist/skeleton.css'
 
 const BlackWhite = () => {
     return (
@@ -18,7 +16,7 @@ const BlackWhite = () => {
                                 ImagesBW.map((images) => {
                                     if ((images.id % 2) !== 0) {
                                         return (
-                                            <img src={images.img || <Skeleton />} alt="images-sk8mode" key={images.id} />
+                                            <img src={images.img} alt="images-sk8mode" key={images.id} />
                                         );
                                     }
                                 })
@@ -29,7 +27,7 @@ const BlackWhite = () => {
                                 ImagesBW.map((images) => {
                                     if ((images.id % 2) === 0) {
                                         return (
-                                            <img src={images.img || <Skeleton />} alt="images-sk8mode" key={images.id} />
+                                            <img src={images.img} alt="images-sk8mode" key={images.id} />
                                         );
                                     }
                                 })
