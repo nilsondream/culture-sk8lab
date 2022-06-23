@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Switch, useLocation } from 'react-router-dom'
+import useVH from 'react-viewport-height';
 import { AnimatePresence } from 'framer-motion'
 import { SkeletonTheme } from 'react-loading-skeleton'
 import Menu from './components/Menu'
@@ -12,6 +13,8 @@ import './style/GlobalStyled.css'
 import 'react-loading-skeleton/dist/skeleton.css'
 
 const App = () => {
+    
+    useVH();
 
     const location = useLocation();
 
