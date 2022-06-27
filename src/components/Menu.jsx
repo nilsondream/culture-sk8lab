@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom';
-import { VscMenu, VscChromeClose } from "react-icons/vsc";
+import { NavLink } from 'react-router-dom'
+import useVH from 'react-viewport-height'
+import { VscMenu, VscChromeClose } from "react-icons/vsc"
 import '../style/MenuStyled.css'
 
 const Menu = () => {
