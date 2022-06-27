@@ -36,3 +36,18 @@ button {
     outline: none;
     background: transparent;
 }
+
+.loader-screen {
+    min-height: calc(var(--vh, 1vh) * 100);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-screen h1 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    cursor: default;
+}
